@@ -2,7 +2,7 @@ import TechStackBadge from "./TechStackBadge";
 
 export default function Site({ name, link, summary, tech_stacks }) {
   return (
-    <div style={{ textDecoration: "none" }} href={link}>
+    <a style={{ textDecoration: "none" }} href={link}>
       <div>
         {name}:{summary}
       </div>
@@ -11,6 +11,6 @@ export default function Site({ name, link, summary, tech_stacks }) {
           <TechStackBadge tech_name={name} key={idx}></TechStackBadge>
         ))}
       </div>
-    </div>
+    </a>
   );
 }
