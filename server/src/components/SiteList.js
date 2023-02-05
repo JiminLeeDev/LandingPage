@@ -1,9 +1,16 @@
+import { useEffect } from "react";
+
+import { Paper } from "@mui/material";
+import { Stack } from "@mui/system";
+
 export default function SiteList({ Sites }) {
   return (
-    <ul style={{ display: "flex", flexDirection: "column" }}>
+    <Stack spacing={2}>
       {Sites.map((site, idx) => (
-        <li id={idx}>{site}</li>
+        <Paper elevation={1} id={idx}>
+          {site}
+        </Paper>
       ))}
-    </ul>
+    </Stack>
   );
 }

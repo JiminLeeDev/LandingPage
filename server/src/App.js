@@ -1,31 +1,23 @@
+import { useEffect } from "react";
+
 import Site from "./components/Site";
 import SiteList from "./components/SiteList";
+import ProjectList from "./project_list.json";
 
 export default function App() {
   return (
     <>
       <SiteList
-        Sites={[
+        Sites={ProjectList.project_list.map((project) => (
           <Site
-            link=""
-            name="GymLog"
-            summary="개인 기록을 작성하기 위한 블로그 프로젝트입니다."
-            tech_stacks={["react", "mui", "mariadb"]}
-          />,
-          <Site
-            link=""
-            name="SomeProject1"
-            summary="테스트용 프로젝트1입니다."
-            tech_stacks={["react", "mui", "redux", "mongodb"]}
-          />,
-          <Site
-            link=""
-            name="SomeProject2"
-            summary="테스트용 프로젝트2입니다."
-            tech_stacks={["next", "bootstrap", "mariadb"]}
-          />,
-        ]}
-      ></SiteList>
+            name={project.name}
+            link={project.link}
+            github_link={project.github_link}
+            summary={project.summary}
+            tech_stacks={project.tech_stacks}
+          />
+        ))}
+      />
     </>
   );
 }
