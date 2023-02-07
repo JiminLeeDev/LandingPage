@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-
 import { Paper } from "@mui/material";
 import { Stack } from "@mui/system";
 

@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-
 import Site from "./components/Site";
 import SiteList from "./components/SiteList";
 import ProjectList from "./project_list.json";

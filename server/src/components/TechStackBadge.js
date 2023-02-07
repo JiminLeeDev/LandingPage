@@ -1,5 +1,4 @@
 import { Paper, Typography } from "@mui/material";
-import { useEffect } from "react";
 
 export default function TechStackBadge({ tech_name, tech_icon }) {
   return (
